@@ -40,7 +40,7 @@ onValue(shoppingListInDB, function(snapshot) {
             newListItem.textContent = DatabaseListValue[i];
             itemList.append(newListItem);
 
-            newListItem.addEventListener("click", function() {
+            newListItem.addEventListener("longpress", function() {
                 let exactLocationOfItemInDB = ref(database, `duduList/${dbItemKeysArray[i]}`)
                 remove(exactLocationOfItemInDB)
 
